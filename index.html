@@ -4,96 +4,118 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TWH Built Ltd</title>
-  <meta name="description" content="TWH Built Ltd — Architectural Building & Engineering. Residential & Commercial." />
+  <meta name="description" content="TWH Built Ltd — Architectural Building & Engineering. Industrial, Commercial & Residential." />
   <style>
     :root{
-      --bg:#0b0b0b;
-      --fg:#ffffff;
-      --muted:#a3a3a3;
-      --line:#222;
-      --maxw:760px;
+      --bg:#0b0b0b; --fg:#ffffff; --muted:#a3a3a3; --line:#222; --maxw:980px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--fg);
-      font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", system-ui, sans-serif;
-      line-height:1.5;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
-    .wrap{
-      min-height:100%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:8vh 2rem;
-    }
-    .card{
-      width:100%;
-      max-width:var(--maxw);
-      text-align:center;
-    }
-    .logo{
-      display:inline-block;
-      max-width:220px;
-      width:60%;
-      height:auto;
-      margin:0 auto 2.2rem;
-      filter: drop-shadow(0 0 0 rgba(0,0,0,0)); /* crisp edges */
-    }
-    h1{
-      margin:0 0 .25rem 0;
-      font-size:clamp(18px, 3.2vw, 32px);
-      font-weight:600;
-      letter-spacing:.2px;
-    }
-    .tag{
-      margin:.25rem 0 1.75rem 0;
-      font-size:clamp(16px, 2.3vw, 20px);
-      color:var(--muted);
-      letter-spacing:.3px;
-    }
-    .contact{
-      margin:0;
-      font-size:clamp(16px, 2.1vw, 18px);
-    }
-    .contact a{
-      color:#fff;
-      text-decoration:underline;
-      text-underline-offset:3px;
-    }
-    footer{
-      margin-top:6vh;
-      padding-top:1.25rem;
-      border-top:1px solid var(--line);
-      font-size:12.5px;
-      color:var(--muted);
-    }
+    *{box-sizing:border-box} html,body{height:100%}
+    body{margin:0;background:var(--bg);color:var(--fg);font-family:ui-sans-serif,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+    a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:6rem 1.5rem 3rem}
+    .center{text-align:center}
+    .logo{display:inline-block;max-width:260px;width:60%;height:auto;margin:0 auto 2rem}
+    h1{margin:.25rem 0 0;font-size:clamp(22px,3.2vw,32px);font-weight:600;letter-spacing:.2px}
+    .sub{margin:.4rem 0 1.6rem;font-size:clamp(16px,2.1vw,18px);color:var(--muted);letter-spacing:.3px}
+    section{margin:3.5rem 0;border-top:1px solid var(--line);padding-top:2.2rem}
+    h2{margin:0 0 .6rem;font-size:clamp(18px,2.4vw,22px);font-weight:600}
+    p{margin:.5rem 0}
+    .grid{display:grid;gap:1.2rem}
+    @media(min-width:760px){ .grid.cols-3{grid-template-columns:repeat(3,1fr)} }
+    .tile{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#0f0f0f}
+    .tile img{width:100%;height:180px;object-fit:cover;display:block}
+    .tile .pad{padding:1rem}
+    .list{margin:.6rem 0 0 0;padding:0;list-style:none}
+    .list li{margin:.35rem 0}
+    .contact-card{border:1px solid var(--line);border-radius:14px;padding:1.25rem;background:#0f0f0f}
+    .note{color:var(--muted);font-size:14px;margin-top:.4rem}
+    footer{margin:3rem 0 1rem;color:var(--muted);font-size:12.5px;text-align:center;border-top:1px solid var(--line);padding-top:1rem}
   </style>
 </head>
 <body>
+
+  <!-- HERO -->
+  <header class="wrap center" aria-label="TWH Built">
+    <img class="logo" src="logo.png" alt="TWH Built Ltd" />
+    <h1>Architectural Building &amp; Engineering</h1>
+    <p class="sub">Industrial, Commercial &amp; Residential</p>
+  </header>
+
   <main class="wrap">
-    <section class="card" aria-label="TWH Built">
-      <!-- Place your logo.png in the repo root -->
-      <img src="logo.png" alt="TWH Built Ltd" class="logo" />
 
-      <!-- Tagline (Option A with your ampersand preference) -->
-      <h1>Architectural Building &amp; Engineering</h1>
-      <p class="tag">Residential &amp; Commercial</p>
-
-      <p class="contact">contact: <a href="mailto:neil@twhbuilt.co.uk">neil@twhbuilt.co.uk</a></p>
-
-      <footer>
-        <span>TWH Built Ltd · Company No. 13404541</span>
-        <span> · &copy; <span id="y"></span> All rights reserved.</span>
-      </footer>
+    <!-- WHAT WE DO -->
+    <section aria-labelledby="what">
+      <h2 id="what" class="center">What we do</h2>
+      <p class="center">
+        TWH Built Ltd delivers engineered builds with high-quality, accurate detailing.
+        We take on industrial, residential, and commercial work—working through design,
+        construction plans, and delivery of the project.
+      </p>
     </section>
+
+    <!-- HOW WE WORK -->
+    <section aria-labelledby="how">
+      <h2 id="how" class="center">How we work</h2>
+      <ul class="list center">
+        <li><strong>First principles</strong> — decisions grounded in engineering, cost, and buildability.</li>
+        <li><strong>Detailed design</strong> — coordination up front; 3D, structural and detailing drawings; efficient engineering.</li>
+        <li><strong>Attention to detail</strong> — the finish matters.</li>
+        <li><strong>We thrive in the complex</strong> — one-off, hard-to-build projects.</li>
+        <li><strong>Accountable delivery</strong> — clear scopes, predictable handover.</li>
+      </ul>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section aria-labelledby="exp">
+      <h2 id="exp" class="center">Experience</h2>
+
+      <div class="grid cols-3">
+        <article class="tile">
+          <img src="industrial.jpg" alt="Industrial & commercial detail" />
+          <div class="pad">
+            <h3>Industrial &amp; Commercial</h3>
+            <p>Steel and timber structures, mezzanines, fit-outs, full M&amp;E services, and production system design.</p>
+          </div>
+        </article>
+
+        <article class="tile">
+          <img src="residential.jpg" alt="Residential detail" />
+          <div class="pad">
+            <h3>Residential Development</h3>
+            <p>New builds, refurbs, extensions — structure, fabric, and high-quality complex detailing and finishes.</p>
+          </div>
+        </article>
+
+        <article class="tile">
+          <img src="sauna.jpg" alt="Garden room / sauna detail" />
+          <div class="pad">
+            <h3>Garden Rooms &amp; Saunas</h3>
+            <p>Experience in niche garden rooms and wellness spaces. Designed and engineered to custom briefs. Heat-treated
+              timber builds that are dry, durable, and beautiful.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section aria-labelledby="contact">
+      <h2 id="contact" class="center">Contact</h2>
+
+      <div class="contact-card center">
+        <p><strong>Project enquiries:</strong> <a href="mailto:neil@twhbuilt.co.uk">neil@twhbuilt.co.uk</a></p>
+        <p><strong>Suppliers:</strong> send line cards and terms to
+          <a href="mailto:accounts@twhbuilt.co.uk">accounts@twhbuilt.co.uk</a></p>
+        <p class="note">Trade suppliers are welcome to introduce ranges, technical details, and lead times.</p>
+      </div>
+    </section>
+
   </main>
 
-  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
+  <footer>
+    TWH Built Ltd · Company No. 13404541 · Registered in England &amp; Wales ·
+    &copy; <span id="y"></span> All rights reserved.
+  </footer>
+
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
-
