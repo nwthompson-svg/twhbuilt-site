@@ -1,28 +1,98 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>TW Built</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TWH Built Ltd</title>
+  <meta name="description" content="TWH Built Ltd — Architectural Building & Engineering. Residential & Commercial." />
   <style>
-    :root{--fg:#1b1b1b;--muted:#6b7280;--line:#e5e7eb}
-    html,body{height:100%} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial,sans-serif;color:var(--fg);background:#fff}
-    .wrap{min-height:100%;display:flex;align-items:center;justify-content:center;padding:6rem 1.5rem}
-    .card{max-width:720px;width:100%;border:1px solid var(--line);border-radius:16px;padding:32px;box-shadow:0 4px 20px rgba(0,0,0,.05)}
-    .logo{height:56px;margin-bottom:16px}
-    h1{margin:0 0 8px;font-size:28px} p{margin:8px 0;color:var(--muted);line-height:1.6}
-    .meta{margin-top:16px;font-size:14px;color:var(--muted)}
+    :root{
+      --bg:#0b0b0b;
+      --fg:#ffffff;
+      --muted:#a3a3a3;
+      --line:#222;
+      --maxw:760px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--fg);
+      font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", system-ui, sans-serif;
+      line-height:1.5;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:8vh 2rem;
+    }
+    .card{
+      width:100%;
+      max-width:var(--maxw);
+      text-align:center;
+    }
+    .logo{
+      display:inline-block;
+      max-width:220px;
+      width:60%;
+      height:auto;
+      margin:0 auto 2.2rem;
+      filter: drop-shadow(0 0 0 rgba(0,0,0,0)); /* crisp edges */
+    }
+    h1{
+      margin:0 0 .25rem 0;
+      font-size:clamp(22px, 3.2vw, 32px);
+      font-weight:600;
+      letter-spacing:.2px;
+    }
+    .tag{
+      margin:.25rem 0 1.75rem 0;
+      font-size:clamp(16px, 2.3vw, 20px);
+      color:var(--muted);
+      letter-spacing:.3px;
+    }
+    .contact{
+      margin:0;
+      font-size:clamp(16px, 2.1vw, 18px);
+    }
+    .contact a{
+      color:#fff;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+    footer{
+      margin-top:6vh;
+      padding-top:1.25rem;
+      border-top:1px solid var(--line);
+      font-size:12.5px;
+      color:var(--muted);
+    }
   </style>
 </head>
 <body>
   <main class="wrap">
-    <section class="card">
-      <img class="logo" src="logo.png" alt="TW Built logo" />
-      <h1>TW Built</h1>
-      <p>Simple, well-engineered solutions. If you need to reach me, email <a href="mailto:neil@twbuilt.co.uk">neil@twbuilt.co.uk</a>.</p>
-      <p class="meta">© <span id="y"></span> TW Built Ltd. All rights reserved.</p>
+    <section class="card" aria-label="TWH Built">
+      <!-- Place your logo.png in the repo root -->
+      <img src="logo.png" alt="TWH Built Ltd" class="logo" />
+
+      <!-- Tagline (Option A with your ampersand preference) -->
+      <h1>Architectural Building &amp; Engineering</h1>
+      <p class="tag">Residential &amp; Commercial</p>
+
+      <p class="contact">Contact: <a href="mailto:neil@twhbuilt.co.uk">neil@twhbuilt.co.uk</a></p>
+
+      <footer>
+        <span>TWH Built Ltd · Company No. 13404541</span>
+        <span> · &copy; <span id="y"></span> All rights reserved.</span>
+      </footer>
     </section>
   </main>
-  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear()</script>
 </body>
 </html>
