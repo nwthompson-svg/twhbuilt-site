@@ -17,14 +17,19 @@
 
   <!-- ═══════════════════════════════════════════
          SECTION 1 — HERO
-         Logo + Typography. Compact height.
+         Full-screen photo background with dark overlay.
     ═══════════════════════════════════════════ -->
   <header id="hero" class="hero">
+    <div class="hero__bg">
+      <img
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAuIhjm3P3Q98j0_-cbhngRnQWbcXdnRrdNM-92carRWtcrRu9pcPGTvrKb5uMMoVjXQ3HHsvQ3cD82zGQ_9Vk8qDXKiu690TbQM9kWBD2FKL3P8bKCqpmBvRGoevihQG_VYLXWYLgeDJuBHggPSUlGzojtF_5D9GcWIyHhKsHkMBa1TeLAAJO3A9ulUbeJN0oX-lyfc1yvLxh03CznVGWVqQSH39b8OLKuKQ3BChtyqNey1SQUZxo8rmBXW71bA-D2OH0PL3KSwJf"
+        alt="Atmospheric architectural interior" class="hero__bg-img" />
+      <div class="hero__overlay"></div>
+    </div>
     <div class="hero__inner">
-      <!-- TWH Roof/Diamond Logo -->
-      <svg class="hero__logo" width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M32 4L4 32H16V60H48V32H60L32 4Z" stroke="#D4A84B" stroke-width="2" stroke-linejoin="round" />
-        <path d="M32 14L14 32H22V52H42V32H50L32 14Z" fill="#D4A84B" fill-opacity="0.2" />
+      <svg class="hero__logo" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 15l6-6 6 6"></path>
       </svg>
       <h1 class="hero__title">TWH Built</h1>
       <div class="hero__rule"></div>
@@ -34,7 +39,7 @@
 
   <!-- ═══════════════════════════════════════════
          SECTION 2 — WHAT WE DO
-         Intro paragraph + 3 capability cards.
+         Intro paragraph + 3 capability cards with images.
     ═══════════════════════════════════════════ -->
   <section id="what-we-do" class="section section--what-we-do">
     <div class="section__container">
@@ -43,58 +48,77 @@
         We deliver engineered builds — from design intent through to handover. Our work spans commercial infrastructure
         and high-specification residential projects across the South West.
       </p>
-      <div class="card-grid">
-        <article class="card" id="card-commercial">
-          <h3 class="card__title">Commercial &amp; Industrial</h3>
-          <p class="card__body">
-            Industrial fit-outs, manufacturing systems, mechanical and electrical services. Clean room design and
-            construction for food and pharmaceutical environments.
-          </p>
+
+      <div class="cards-grid">
+        <article class="card-article">
+          <div class="card-article__image-wrap">
+            <img src="assets/images/commercial.png" alt="Stainless steel cleanroom construction"
+              class="card-article__img" />
+          </div>
+          <div class="card-article__text">
+            <h3 class="card-article__title">Commercial &amp; Industrial</h3>
+            <p class="card-article__body">Industrial fit-outs, manufacturing systems, mechanical and electrical
+              services. Clean room design and construction for food and pharmaceutical environments.</p>
+          </div>
         </article>
-        <article class="card" id="card-residential">
-          <h3 class="card__title">Residential</h3>
-          <p class="card__body">
-            New builds, structural refurbishments, and complex detailing. Engineering-led residential work where
-            quality, durability, and precision matter.
-          </p>
+
+        <article class="card-article">
+          <div class="card-article__image-wrap">
+            <img src="assets/images/residential.png" alt="Premium residential timber cladding"
+              class="card-article__img" />
+          </div>
+          <div class="card-article__text">
+            <h3 class="card-article__title">Residential</h3>
+            <p class="card-article__body">New builds, structural refurbishments, and complex detailing. Engineering-led
+              residential work where quality, durability, and precision matter.</p>
+          </div>
         </article>
-        <article class="card" id="card-surveying">
-          <h3 class="card__title">Surveying &amp; Setting Out</h3>
-          <p class="card__body">
-            GNSS topographic surveys, site setting out, and measured surveys. RTK-grade accuracy for architects,
-            planning consultants, and construction projects.
-          </p>
+
+        <article class="card-article">
+          <div class="card-article__image-wrap">
+            <img src="assets/images/surveying.png" alt="GNSS survey equipment on site" class="card-article__img" />
+          </div>
+          <div class="card-article__text">
+            <h3 class="card-article__title">Surveying &amp; Setting Out</h3>
+            <p class="card-article__body">GNSS topographic surveys, site setting out, and measured surveys. RTK-grade
+              accuracy for architects, planning consultants, and construction projects.</p>
+          </div>
         </article>
       </div>
+
     </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
          SECTION 3 — HOW WE WORK
-         4-step process strip.
+         4-step vertical timeline.
     ═══════════════════════════════════════════ -->
   <section id="how-we-work" class="section section--how-we-work">
     <div class="section__container">
       <h2 class="section__heading">How We Work</h2>
-      <div class="process-strip">
+      <div class="process-grid">
         <div class="process-step">
           <span class="process-step__number">01</span>
           <h4 class="process-step__title">Design</h4>
+          <div class="process-step__rule"></div>
           <p class="process-step__desc">Working out the design intent and engineering the solution.</p>
         </div>
         <div class="process-step">
           <span class="process-step__number">02</span>
           <h4 class="process-step__title">Programme</h4>
+          <div class="process-step__rule"></div>
           <p class="process-step__desc">Coordinating scope, procurement, and delivery schedules.</p>
         </div>
         <div class="process-step">
           <span class="process-step__number">03</span>
           <h4 class="process-step__title">Construction</h4>
+          <div class="process-step__rule"></div>
           <p class="process-step__desc">Managing subcontractors and delivering on site.</p>
         </div>
         <div class="process-step">
           <span class="process-step__number">04</span>
           <h4 class="process-step__title">Handover</h4>
+          <div class="process-step__rule"></div>
           <p class="process-step__desc">Completed to specification, documented, accountable.</p>
         </div>
       </div>
@@ -110,7 +134,7 @@
       <h2 class="section__heading">Contact</h2>
       <div class="contact-lines">
         <p class="contact-line">
-          Project enquiries — <a href="mailto:neil@twhbuilt.co.uk" class="contact-link">neil@twhbuilt.co.uk</a>
+          Project enquiries — <a href="mailto:projects@twhbuilt.co.uk" class="contact-link">projects@twhbuilt.co.uk</a>
         </p>
         <p class="contact-line">
           Suppliers — <a href="mailto:accounts@twhbuilt.co.uk" class="contact-link">accounts@twhbuilt.co.uk</a>
@@ -121,10 +145,14 @@
 
   <!-- ═══════════════════════════════════════════
          SECTION 5 — FOOTER
-         Single quiet line.
     ═══════════════════════════════════════════ -->
   <footer id="footer" class="footer">
-    <p class="footer__text">© 2025 TWH Built Ltd. Registered in England.</p>
+    <div class="footer__inner">
+      <div class="footer__logo-mark"></div>
+      <p class="footer__name">TWH Built.</p>
+      <div class="footer__rule"></div>
+      <p class="footer__text">© 2025 TWH Built Ltd. Registered in England.</p>
+    </div>
   </footer>
 
   <script src="assets/js/app.js"></script>
