@@ -101,3 +101,53 @@ The project executes a strategic land swap agreed with the MacDonalds (Main Farm
     *   **Data:** Lives in `Project Management/Lower Hutchins Budget.xlsx` (Formula-driven, AI-Assisted via Claude Add-in).
     *   **Narrative:** Lives in `Project Management/Setup Files/_XL Budget Narrative Context.md` (Strategy, Confidence Logs, Git-Trackable).
     *   **Review Interface:** Use "Excel Viewer" in VS Code to see both side-by-side.
+
+---
+
+## 6. TWH Built Ltd — Company Website
+
+### A. Overview
+*   **Purpose:** Single-page marketing website for TWH Built Ltd — the construction and engineering company.
+*   **Live URL:** [https://twhbuilt.co.uk](https://twhbuilt.co.uk)
+*   **Workspace:** `d:\Dropbox\_thompson & west holdings ltd\_TWH Built Ltd\TWH Website`
+*   **Design Aesthetic:** Dark premium, engineering-grade. `#1A1A1A` base, `#D4A84B` gold accents, Inter typeface.
+
+### B. Hosting & Deployment
+*   **Host:** GitHub Pages (static site, no build step).
+*   **Repository:** `https://github.com/nwthompson-svg/twhbuilt-site`
+*   **GitHub Username:** `nwthompson-svg`
+*   **Branch:** `main` (auto-deploys via GitHub Pages).
+*   **Custom Domain:** Configured via `CNAME` file → `twhbuilt.co.uk`.
+*   **Deployment Protocol:** `git add -A` → `git commit -m "..."` → `git push origin main`. Pages rebuilds within ~60 seconds.
+
+### C. Tech Stack
+*   **HTML/CSS/JS only** — no framework, no build tooling.
+*   **Local Dev:** `npx -y serve -l 3000 .` from the workspace root.
+*   **CSS:** Vanilla CSS with design tokens in `:root`. No Tailwind.
+*   **Git:** Standard `.git` inside the workspace (not the Sidecar pattern used for Lower Hutchins).
+
+### D. Site Structure (Sections)
+1.  **Hero** — Background image with 88% black overlay, pure typography. TWH Built / Architectural Building & Engineering.
+2.  **What We Do** — 4 service cards in a 2×2 grid (desktop), single-column (mobile, capped at 360px):
+    *   Commercial & Industrial
+    *   Residential
+    *   Surveying & Setting Out
+    *   Garden Rooms & Saunas
+3.  **How We Work** — 5 centred value statements (slightly lighter dark bg `#252525`):
+    *   First Principles → Detailed Design → Attention to Detail → Complexity → Accountable Delivery
+4.  **Contact** — Two email addresses: `projects@twhbuilt.co.uk` (enquiries), `accounts@twhbuilt.co.uk` (suppliers).
+5.  **Footer** — Near-black (`#0A0A0A`), company name and registration.
+
+### E. Image Assets
+*   All images live in `assets/images/`.
+*   `commercial.png` — Stainless steel cleanroom (AI-generated via Gemini 3).
+*   `residential.png` — Timber cladding residential (AI-generated via Gemini 3).
+*   `surveying.png` — GNSS survey equipment on site (AI-generated via Gemini 3).
+*   `sauna.png` — Thermory heat-treated timber sauna (sourced from Thermory website).
+*   `hero-bg.webp` — Abstract dark texture hero background (AI-generated via Gemini 3).
+*   Card images display at **16:9** aspect ratio with `object-fit: cover` (centre crop). Greyscale by default, colour on hover.
+
+### F. MCP Integrations & Tools
+*   **Stitch (Google):** MCP server used during initial design exploration. Generates UI screens from text prompts. Useful for rapid prototyping but outputs needed significant manual rework to match the spec.
+*   **Image Generation (`generate_image` tool):** Uses Gemini 3 Pro Image model. **Known issue:** frequently returns `503 MODEL_CAPACITY_EXHAUSTED` errors. When this happens, retry after ~30 seconds or source images externally.
+*   **PowerShell Gotcha:** Windows PowerShell does not support `&&` for command chaining. Use separate `git add` and `git commit` calls, or use `; ` as separator.
