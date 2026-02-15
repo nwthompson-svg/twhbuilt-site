@@ -414,4 +414,8 @@ a {
         justify-content: center;
         gap: var(--space-lg);
     }
+
+    .section__intro {
+        max-width: 580px;
+    }
 }
